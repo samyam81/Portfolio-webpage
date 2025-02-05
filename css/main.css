@@ -447,8 +447,8 @@ hr {
 #projects {
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 51, 102, 0.9)
+    rgba(68, 0, 0, 0.9),
+    rgba(4, 57, 110, 0.9)
   ); /* Dark gradient background */
   padding: 50px 0;
   color: var(--white-color); /* White text for contrast */
@@ -464,15 +464,39 @@ hr {
   margin-bottom: 40px;
 }
 
-/* Owl Carousel for Projects */
-.owl-carousel .item {
+/* Layout for the columns */
+#projects .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Single GIF on the Left */
+#projects .col-md-4 {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#projects .col-md-4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 5px solid var(--accent-color); /* Batarang Gold border */
+}
+
+/* Project Cards on the Right */
+#projects .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Project Card */
 .project-card {
   background-color: var(--dark-color); /* Shadowy Charcoal background */
+  width: 80%;
+  margin-left: 90px;
   border: none;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow */
@@ -531,24 +555,6 @@ hr {
 
 .project-card .badge.bg-success {
   background-color: var(--dark-color); /* Shadowy Charcoal for success badges */
-}
-
-/* Owl Carousel Navigation Arrows */
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-next {
-  background-color: transparent;
-  border: none;
-  color: var(--accent-color); /* Batarang Gold for arrows */
-  font-size: 3rem;
-  padding: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.owl-carousel .owl-nav button.owl-prev:hover,
-.owl-carousel .owl-nav button.owl-next:hover {
-  color: var(--secondary-color); /* Batman Blue on hover */
-  transform: translateY(-50%) scale(1.2); /* Bigger on hover */
 }
 
 /* Education Section */
