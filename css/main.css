@@ -1,0 +1,778 @@
+:root {
+  --primary-color: #080808; /* Vampire Black */
+  --secondary-color: #003366; /* Batman Blue */
+  --text-color: #808080; /* Gotham Gray */
+  --accent-color: #ffd700; /* Batarang Gold */
+  --dark-color: #36454f; /* Shadowy Charcoal */
+  --white-color: #ffffff;
+  --divider-color: #dfe1de;
+  --dark-divider-color: #ffffff33;
+  --error-color: rgb(230, 87, 87);
+  --default-font: "Fustat", sans-serif;
+  --bone-white: #f1f1f1;
+}
+
+/* Webkit Browsers: Chrome, Safari, Edge (Chromium) */
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Scrollbar Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: var(--shadowy-charcoal); /* Dark background for track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--batman-blue); /* Batman Blue color for the thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid var(--gotham-gray); /* Border for thumb */
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color); /* Batarang Gold when hovered */
+}
+
+/* Scrollbar Corner (intersection of horizontal and vertical scrollbars) */
+::-webkit-scrollbar-corner {
+  background-color: var(
+    --shadowy-charcoal
+  ); /* Dark background for the corner */
+}
+
+/* Scrollbar Buttons (optional, hide the arrows) */
+::-webkit-scrollbar-button {
+  display: none; /* Hide the arrows */
+}
+
+/* Edge (non-Chromium version) */
+
+/* No special rules, Edge uses Webkit, so it's covered by Webkit settings above */
+
+/* Opera */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--shadowy-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--batman-blue);
+  border-radius: 10px;
+  border: 3px solid var(--gotham-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color);
+}
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color); /* Vampire Black */
+  color: var(--white-color); /* White text color */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: transparent; /* Make navbar background transparent */
+  box-shadow: none; /* Remove shadow */
+}
+
+.navbar-brand {
+  font-family: var(--default-font);
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--accent-color); /* Batarang Gold */
+  text-transform: uppercase;
+}
+
+.navbar-toggler {
+  border-color: var(--accent-color); /* Batarang Gold */
+}
+
+.navbar-toggler-icon {
+  background-color: var(--accent-color); /* Batarang Gold */
+}
+
+.navbar-nav .nav-link {
+  color: var(--white-color); /* White text for links */
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color); /* Batarang Gold on hover */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent dark background on hover */
+  border-radius: 5px; /* Smooth edges on hover */
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+  color: var(--accent-color); /* Batarang Gold when active or hovered */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+/* For Mobile Navbar */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 51, 102, 0.7)),
+    url("home.jpg") no-repeat center center/cover; /* Gradient + background image */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+}
+
+.hero-content {
+  color: var(--white-color); /* White text */
+  position: relative;
+  z-index: 2; /* Ensure content appears above background */
+  margin-left: 45px;
+}
+
+.hero-content h1 {
+  font-family: var(--default-font);
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--accent-color); /* Batarang Gold */
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: var(--white-color); /* White text for description */
+  margin-bottom: 30px;
+}
+
+.hero-content .social-links a {
+  color: var(--white-color); /* White color for social icons */
+  font-size: 1.75rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.hero-content .social-links a:hover {
+  color: var(--accent-color); /* Batarang Gold on hover */
+}
+
+/* About Me Section */
+.hero-content .about-me {
+  background: rgba(255, 255, 255, 0.05); /* Light transparent background */
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  max-width: 500px;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2); /* Subtle gold shadow */
+}
+
+/* Role / Title Text */
+.hero-content .role {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--white-color);
+  margin-bottom: 15px;
+}
+
+/* Highlighted Keywords */
+.hero-content .highlight {
+  color: var(--accent-color); /* Batarang Gold */
+  font-weight: bold;
+}
+
+/* Blog Link */
+.hero-content .blog-link {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content .blog-link:hover {
+  color: var(--white-color);
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.hero-content .social-links a {
+  color: var(--white-color);
+  font-size: 1.75rem;
+  margin: 0 12px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content .social-links a:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* Right Side - Profile Image */
+.hero-img {
+  text-align: center;
+}
+
+.hero-img img {
+  width: 600px;
+  height: 600px;
+  border-radius: 20px; /* Rounded square corners */
+  object-fit: cover;
+  border: 5px solid var(--accent-color); /* Batarang Gold border */
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px; /* Slightly smaller rounding for smaller screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px; /* Adjusted for mobile screens */
+  }
+}
+
+hr {
+  border: none; /* Remove default border */
+  height: 2px; /* Set the thickness of the line */
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--secondary-color)
+  ); /* Gradient from Batarang Gold to Batman Blue */
+  margin: 40px 0; /* Add spacing above and below the line */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: subtle shadow for depth */
+}
+
+/* Skills Section */
+#skills {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 51, 102, 0.7)
+  ); /* Gradient from black to Batman Blue */
+  padding: 50px 0;
+  color: var(--white-color); /* White text */
+}
+
+#skills .section-title {
+  font-family: var(--default-font);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color); /* Batarang Gold */
+  margin-bottom: 40px;
+}
+
+.skill-card {
+  background-color: var(
+    --dark-color
+  ); /* Shadowy Charcoal background for cards */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.skill-card:hover {
+  transform: translateY(-10px); /* Hover effect to lift the card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.skill-card i {
+  color: var(--accent-color); /* Default icon color to Batarang Gold */
+  transition: color 0.3s ease;
+}
+
+.skill-card h3 {
+  font-size: 1.25rem;
+  color: var(--white-color);
+  margin-top: 15px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: var(--white-color);
+}
+
+.skill-card:hover i {
+  color: var(--secondary-color); /* Batman Blue icon color on hover */
+}
+
+/* Owl Carousel Navigation Arrows */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: var(--accent-color); /* Batarang Gold for arrows */
+  font-size: 3rem; /* Bigger arrows */
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  left: -50px; /* Position left arrow */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  right: -50px; /* Position right arrow */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  color: var(--secondary-color); /* Batman Blue on hover */
+  transform: translateY(-50%) scale(1.2); /* Bigger on hover */
+}
+
+/* Owl Carousel Pagination Dots */
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 30px; /* Space between the carousel and dots */
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: var(--divider-color); /* Divider color for dots */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  background-color: var(--accent-color); /* Active dot color */
+}
+
+.owl-carousel .owl-dots .owl-dot:hover {
+  background-color: var(--secondary-color); /* Batman Blue on hover */
+}
+
+/* Improve Text Visibility in Skill Cards */
+.skill-card h3,
+.skill-card p {
+  color: var(--white-color); /* Ensure text is white for contrast */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for better contrast */
+}
+
+.skill-card p {
+  font-size: 1rem;
+}
+
+/* Ensure Text Inside Carousel Items is Readable */
+.owl-item .card {
+  color: var(--white-color); /* Set card text color to white */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+.owl-item .card h3 {
+  font-size: 1.25rem;
+}
+
+.owl-item .card p {
+  font-size: 1rem;
+}
+
+/* Ensure contrast for text and background */
+#skills {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 51, 102, 0.8)
+  ); /* Darker gradient for better text visibility */
+  padding: 50px 0;
+  color: var(--white-color); /* White text */
+}
+
+/* Override text-muted class for better visibility */
+.text-muted {
+  color: var(
+    --white-color
+  ) !important; /* Use white color for better contrast */
+  text-shadow: none; /* Remove shadow for pure white */
+}
+
+/* Specific override for text-muted inside carousel items and skill cards */
+.owl-item .card p.text-muted {
+  color: var(
+    --white-color
+  ) !important; /* White color for muted text inside carousel */
+}
+
+/* Projects Section */
+#projects {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 51, 102, 0.9)
+  ); /* Dark gradient background */
+  padding: 50px 0;
+  color: var(--white-color); /* White text for contrast */
+}
+
+/* Section Title */
+#projects .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--white-color); /* White text */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* Owl Carousel for Projects */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Project Card */
+.project-card {
+  background-color: var(--dark-color); /* Shadowy Charcoal background */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+}
+
+/* Card Body */
+.project-card .card-body {
+  padding: 20px;
+  color: var(--white-color); /* White text */
+}
+
+.project-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color); /* Batarang Gold */
+  margin-bottom: 15px;
+}
+
+.project-card .card-text {
+  font-size: 1rem;
+  color: var(--white-color); /* White text */
+  line-height: 1.5;
+}
+
+/* Muted Text inside Projects */
+.project-card .card-text.text-muted {
+  color: var(--white-color); /* White color for muted text */
+  opacity: 0.8; /* Slightly transparent */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Added shadow for visibility */
+}
+
+/* Badge Styling */
+.project-card .badge {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+  font-weight: 600;
+}
+
+.project-card .badge.bg-primary {
+  background-color: var(--secondary-color); /* Batman Blue for primary badges */
+}
+
+.project-card .badge.bg-secondary {
+  background-color: var(
+    --accent-color
+  ); /* Batarang Gold for secondary badges */
+}
+
+.project-card .badge.bg-success {
+  background-color: var(--dark-color); /* Shadowy Charcoal for success badges */
+}
+
+/* Owl Carousel Navigation Arrows */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color); /* Batarang Gold for arrows */
+  font-size: 3rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  color: var(--secondary-color); /* Batman Blue on hover */
+  transform: translateY(-50%) scale(1.2); /* Bigger on hover */
+}
+
+/* Education Section */
+#education {
+  background: linear-gradient(
+    135deg,
+    rgba(42, 42, 42, 0.7),
+    rgba(1, 66, 132, 0.7)
+  );
+  padding: 50px 0; /* Vertical padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-color); /* White text */
+  position: relative;
+}
+
+#education .container {
+  position: relative; /* Position relative to ensure proper stacking */
+  z-index: 1; /* To ensure content is above background */
+}
+
+.accordion-item {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Accordion Header */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--white-color); /* White color for text */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.accordion-header .badge {
+  background-color: var(--accent-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: var(--white-color);
+  font-weight: normal;
+}
+
+/* Accordion Content */
+.accordion-content {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background */
+  color: var(--white-color); /* White text */
+  font-size: 1rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  display: none; /* Hide content by default */
+}
+
+details[open] .accordion-content {
+  display: block; /* Display content when the details element is open */
+}
+
+/* Override default text-muted class for visibility */
+.text-muted {
+  color: var(--white-color); /* White text */
+  opacity: 0.8; /* Slightly transparent */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(
+    135deg,
+    rgba(35, 34, 34, 0.7),
+    rgba(5, 109, 213, 0.7)
+  );
+  padding: 50px 0;
+  color: var(--white-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#contact .container {
+  z-index: 1;
+}
+
+#contact .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+#contact .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#contact .form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--divider-color);
+  color: var(--white-color);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Enhanced placeholder visibility */
+#contact .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighter white for better visibility */
+  opacity: 1; /* Ensure placeholder is fully opaque */
+}
+
+#contact .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+#contact .form-group {
+  margin-bottom: 20px;
+}
+
+#contact .btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--white-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+#contact .col-md-6 h4 {
+  font-size: 1.75rem;
+  color: var(--white-color);
+}
+
+#contact .col-md-6 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contact .col-md-6 li {
+  font-size: 1.125rem;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+
+#contact .col-md-6 li strong {
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  #contact .row {
+    flex-direction: column;
+  }
+
+  #contact .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: var(
+    --shadowy-charcoal
+  ); /* Dark footer background to match theme */
+  color: var(--white-color); /* White text */
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Light shadow to give depth */
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--white-color); /* White text */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+footer a {
+  color: var(--accent-color); /* Batarang Gold links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+  color: var(--secondary-color); /* Batman Blue on hover */
+}
+
+@media (max-width: 767px) {
+  footer p {
+    font-size: 0.9rem;
+  }
+}

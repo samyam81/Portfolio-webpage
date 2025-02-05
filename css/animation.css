@@ -1,0 +1,99 @@
+/* Animation to make the cards appear with a bounce effect */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Skill Card Animation */
+.skill-card {
+  animation: bounceIn 2s ease-in-out forwards; /* Slow down bounce effect to 2s */
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation Delay for Staggered Effect */
+.skill-card:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.skill-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.skill-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.skill-card:nth-child(4) {
+  animation-delay: 1s;
+}
+.skill-card:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.skill-card:nth-child(6) {
+  animation-delay: 1.4s;
+}
+.skill-card:nth-child(7) {
+  animation-delay: 1.6s;
+}
+.skill-card:nth-child(8) {
+  animation-delay: 1.8s;
+}
+.skill-card:nth-child(9) {
+  animation-delay: 2s;
+}
+.skill-card:nth-child(10) {
+  animation-delay: 2.2s;
+}
+.skill-card:nth-child(11) {
+  animation-delay: 2.4s;
+}
+
+/* Hover Effect: Slight movement and shadow */
+.skill-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* General Animation for Text & Icon */
+.skill-card i {
+  animation: fadeInUp 1s ease-out forwards; /* Slow down text fade-in to 1s */
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Text and Icon fade-in effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon animation with a subtle zoom-in effect */
+.skill-card i {
+  animation: zoomIn 2s ease-in-out forwards; /* Slow zoom-in to 2s */
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

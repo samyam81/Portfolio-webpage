@@ -1,0 +1,37 @@
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 3px var(--bone-white), 0 0 7px var(--bone-white),
+      0 0 11px var(--accent-color), 0 0 14px var(--accent-color);
+  }
+  50% {
+    text-shadow: 0 0 3px var(--bone-white), 0 0 7px var(--bone-white),
+      0 0 11px var(--accent-color), 0 0 14px var(--accent-color);
+  }
+  100% {
+    text-shadow: 0 0 3px var(--bone-white), 0 0 7px var(--bone-white),
+      0 0 11px var(--accent-color), 0 0 14px var(--accent-color);
+  }
+}
+
+.glowing-text {
+  font-size: 2em;
+  color: var(--text-color); /* Use Gotham Gray for text */
+  animation: glowing 1.5s infinite;
+}
+
+/* Apply glow effect to navbar */
+.navbar-brand,
+.nav-link {
+  animation: glowing 1.5s infinite;
+}
+
+/* Apply glow effect to hero text */
+#home .display-4,
+#home .lead {
+  animation: glowing 1.5s infinite;
+}
+
+/* Apply glow effect to section titles */
+.section-title {
+  animation: glowing 1.5s infinite;
+}
