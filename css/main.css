@@ -194,7 +194,7 @@ body {
   padding: 15px 20px;
   border-radius: 12px;
   margin-bottom: 20px;
-  max-width: 500px;
+  max-width: 750px;
   box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2); /* Subtle gold shadow */
 }
 
@@ -781,4 +781,14 @@ footer a:hover {
   footer p {
     font-size: 0.9rem;
   }
+}
+
+.carousel-indicators li {
+  list-style: none; /* Removes default numbering */
+  text-indent: -9999px; /* Hides any numbers */
+  width: 10px; /* Adjust size */
+  height: 10px;
+  background-color: #808080; /* Change to your desired color */
+  border-radius: 50%; /* Makes them circular */
+  margin: 5px; /* Space between indicators */
 }
