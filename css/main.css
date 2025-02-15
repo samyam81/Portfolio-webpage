@@ -148,8 +148,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 51, 102, 0.7)),
-    url("home.jpg") no-repeat center center/cover; /* Gradient + background image */
+  background: var(--primary-color),
+    url("home.jpg") no-repeat center center/cover;
   min-height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
@@ -196,6 +196,10 @@ body {
   margin-bottom: 20px;
   max-width: 750px;
   box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2); /* Subtle gold shadow */
+}
+
+#body {
+  background-color: var(--primary-color);
 }
 
 /* Role / Title Text */
@@ -283,11 +287,7 @@ hr {
 
 /* Skills Section */
 #skills {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 51, 102, 0.7)
-  ); /* Gradient from black to Batman Blue */
+  background: var(--primary-color);
   padding: 50px 0;
   color: var(--white-color); /* White text */
 }
@@ -301,9 +301,7 @@ hr {
 }
 
 .skill-card {
-  background-color: var(
-    --dark-color
-  ); /* Shadowy Charcoal background for cards */
+  background-color: var(--dark-color);
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
@@ -419,11 +417,7 @@ hr {
 
 /* Ensure contrast for text and background */
 #skills {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 51, 102, 0.8)
-  ); /* Darker gradient for better text visibility */
+  background: var(--primary-color);
   padding: 50px 0;
   color: var(--white-color); /* White text */
 }
@@ -445,11 +439,7 @@ hr {
 
 /* Projects Section */
 #projects {
-  background: linear-gradient(
-    135deg,
-    rgba(68, 0, 0, 0.9),
-    rgba(4, 57, 110, 0.9)
-  ); /* Dark gradient background */
+  background: var(--primary-color);
   padding: 50px 0;
   color: var(--white-color); /* White text for contrast */
 }
@@ -458,7 +448,7 @@ hr {
 #projects .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--white-color); /* White text */
+  color: var(--accent-color); /* White text */
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 40px;
@@ -559,11 +549,7 @@ hr {
 
 /* Education Section */
 #education {
-  background: linear-gradient(
-    135deg,
-    rgba(42, 42, 42, 0.7),
-    rgba(1, 66, 132, 0.7)
-  );
+  background: var(--primary-color);
   padding: 50px 0; /* Vertical padding */
   display: flex;
   align-items: center;
@@ -639,11 +625,7 @@ details[open] .accordion-content {
 
 /* Contact Section */
 #contact {
-  background: linear-gradient(
-    135deg,
-    rgba(35, 34, 34, 0.7),
-    rgba(5, 109, 213, 0.7)
-  );
+  background: var(--primary-color);
   padding: 50px 0;
   color: var(--white-color);
   position: relative;
